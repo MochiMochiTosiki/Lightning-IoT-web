@@ -132,6 +132,16 @@ STATIC_ROOT = 'staticfiles'
 DEBUG = False
 
 try:
-    from .local_settings import *
+    from .local_setting import *
+
 except ImportError:
     pass
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = OS.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
