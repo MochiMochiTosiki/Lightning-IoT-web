@@ -132,7 +132,7 @@ STATIC_ROOT = 'staticfiles'
 DEBUG = False
 
 try:
-    from .local_setting import *
+    from .local_settings import *
 
 except ImportError:
     pass
